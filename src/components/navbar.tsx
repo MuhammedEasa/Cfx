@@ -11,6 +11,7 @@ import AnimationContainer from "./global/animation-container";
 import Icons from "./global/icons";
 import Wrapper from "./global/wrapper";
 import { ThemeToggle } from "./theme-toggle";
+import { handleAnchorClick } from "@/utils/smooth-scroll";
 
 const Navbar = () => {
     const [open, setOpen] = useState<boolean>(false);
@@ -58,6 +59,7 @@ const Navbar = () => {
                                 >
                                     <Link
                                         href={link.link}
+                                        onClick={(e) => handleAnchorClick(e, link.link)}
                                         className="relative text-muted-foreground hover:text-foreground transition-all duration-300 rounded-md px-4 py-2 text-sm font-medium whitespace-nowrap group"
                                     >
                                         <span className="relative z-10">{link.name}</span>
@@ -146,7 +148,10 @@ const Navbar = () => {
                                     >
                                         <Link
                                             href={navItem.link}
-                                            onClick={handleMenuClose}
+                                            onClick={(e) => {
+                                                handleAnchorClick(e, navItem.link);
+                                                handleMenuClose();
+                                            }}
                                             className="relative block text-muted-foreground hover:text-foreground w-full px-3 py-3 rounded-md text-sm font-medium transition-all duration-300 group hover:bg-primary/10 hover:translate-x-1"
                                         >
                                             <span className="relative z-10">{navItem.name}</span>

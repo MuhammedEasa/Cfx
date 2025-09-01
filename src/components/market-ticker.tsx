@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTheme } from "next-themes";
 
 interface MarketTickerProps {
   className?: string;
@@ -8,6 +9,7 @@ interface MarketTickerProps {
 
 export const MarketTicker: React.FC<MarketTickerProps> = ({ className }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -31,12 +33,28 @@ export const MarketTicker: React.FC<MarketTickerProps> = ({ className }) => {
           title: "GBP/USD"
         },
         {
+          proName: "FX:USDJPY",
+          title: "USD/JPY"
+        },
+        {
           proName: "TVC:GOLD",
           title: "Gold"
         },
         {
+          proName: "TVC:SILVER",
+          title: "Silver"
+        },
+        {
+          proName: "NYMEX:CL1!",
+          title: "Crude Oil"
+        },
+        {
           proName: "TVC:DJI",
           title: "US30"
+        },
+        {
+          proName: "TVC:SPX",
+          title: "S&P 500"
         },
         {
           proName: "TVC:NDX",
@@ -55,6 +73,22 @@ export const MarketTicker: React.FC<MarketTickerProps> = ({ className }) => {
           title: "Apple"
         },
         {
+          proName: "NASDAQ:MSFT",
+          title: "Microsoft"
+        },
+        {
+          proName: "NASDAQ:GOOGL",
+          title: "Google"
+        },
+        {
+          proName: "NASDAQ:AMZN",
+          title: "Amazon"
+        },
+        {
+          proName: "NASDAQ:META",
+          title: "Meta"
+        },
+        {
           proName: "BITSTAMP:ETHUSD",
           title: "Ethereum"
         }
@@ -62,7 +96,7 @@ export const MarketTicker: React.FC<MarketTickerProps> = ({ className }) => {
       showSymbolLogo: true,
       isTransparent: true,
       displayMode: "adaptive",
-      colorTheme: "dark",
+      colorTheme: theme === "light" ? "light" : "dark",
       locale: "en"
     });
 
@@ -75,7 +109,7 @@ export const MarketTicker: React.FC<MarketTickerProps> = ({ className }) => {
         script.parentNode.removeChild(script);
       }
     };
-  }, []);
+  }, [theme]);
 
   return (
     <div className={`tradingview-widget-container ${className}`} ref={containerRef}>

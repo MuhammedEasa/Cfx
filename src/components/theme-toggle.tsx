@@ -17,7 +17,7 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <Button variant="ghost" size="sm" className="w-9 px-0">
-        <div className="h-[1.2rem] w-[1.2rem]" />
+        <Sun className="h-[1.2rem] w-[1.2rem] text-muted-foreground" />
         <span className="sr-only">Toggle theme</span>
       </Button>
     )

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnimationContainer from "./global/animation-container";
-import Images from "./global/images";
 import Wrapper from "./global/wrapper";
 import { Button } from "./ui/button";
 import Marquee from "./ui/marquee";
@@ -12,12 +11,14 @@ import { MarketTicker } from "./market-ticker";
 const Hero = () => {
 
     const companies = [
-        Images.comp1,
-        Images.comp2,
-        Images.comp3,
-        Images.comp4,
-        Images.comp5,
-        Images.comp6,
+        { name: "Apple", symbol: "AAPL" },
+        { name: "Microsoft", symbol: "MSFT" },
+        { name: "Nvidia", symbol: "NVDA" },
+        { name: "Tesla", symbol: "TSLA" },
+        { name: "Meta", symbol: "META" },
+        { name: "Amazon", symbol: "AMZN" },
+        { name: "Google", symbol: "GOOGL" },
+        { name: "Netflix", symbol: "NFLX" }
     ];
 
     return (
@@ -59,9 +60,10 @@ const Hero = () => {
                             </p>
                             <div className="w-full relative max-w-[calc(100vw-2rem)] lg:max-w-lg">
                                 <Marquee className="[--duration:40s] select-none [--gap:2rem]">
-                                    {[...Array(10)].map((_, index) => (
-                                        <div key={index} className="flex items-center justify-center text-muted-foreground h-16">
-                                            {companies[index % companies.length]({ className: "w-auto h-5" })}
+                                    {companies.map((company, index) => (
+                                        <div key={index} className="flex flex-col items-center justify-center text-muted-foreground h-16 min-w-[80px]">
+                                            <div className="text-sm font-semibold text-foreground">{company.name}</div>
+                                            <div className="text-xs text-muted-foreground">{company.symbol}</div>
                                         </div>
                                     ))}
                                 </Marquee>

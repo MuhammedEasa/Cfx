@@ -36,10 +36,42 @@ export default function ContactPage() {
         setFormData(prev => ({ ...prev, agreeToContact: checked }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission here
-        console.log("Form submitted:", formData);
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setSubmitStatus('success');
+                setFormData({
+                    fullName: "",
+                    email: "",
+                    phoneNumber: "",
+                    accountType: "",
+                    message: "",
+                    agreeToContact: false,
+                });
+            } else {
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -197,13 +229,30 @@ export default function ContactPage() {
                                         </div>
 
                                         {/* Submit Button */}
-                                        <Button 
-                                            type="submit" 
+                                        <Button
+                                            type="submit"
                                             className="w-full"
-                                            disabled={!formData.agreeToContact}
+                                            disabled={!formData.agreeToContact || isSubmitting}
                                         >
-                                            Send Message
+                                            {isSubmitting ? "Sending..." : "Send Message"}
                                         </Button>
+
+                                        {/* Status Messages */}
+                                        {submitStatus === 'success' && (
+                                            <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md">
+                                                <p className="text-green-800 dark:text-green-200 text-sm">
+                                                    Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                                                </p>
+                                            </div>
+                                        )}
+
+                                        {submitStatus === 'error' && (
+                                            <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-md">
+                                                <p className="text-red-800 dark:text-red-200 text-sm">
+                                                    Sorry, there was an error sending your message. Please try again or contact us directly.
+                                                </p>
+                                            </div>
+                                        )}
                                     </form>
                                 </CardContent>
                             </Card>
