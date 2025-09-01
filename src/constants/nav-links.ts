@@ -1,19 +1,19 @@
 export const NAV_LINKS = [
     {
         name: "About Us",
-        link: "#",
+        link: "#about",
     },
     {
         name: "Platform",
-        link: "#",
+        link: "#platform",
     },
     {
         name: "Products",
-        link: "#",
+        link: "#products",
     },
     {
         name: "Accounts",
-        link: "#",
+        link: "/account-types",
     },
     {
         name: "Contact Us",

@@ -11,39 +11,39 @@ import Testimonials from "@/components/testimonials";
 const HomePage = () => {
     return (
         <div className="w-full relative flex flex-col">
-            <section className="w-full">
+            <section id="home" className="w-full">
                 <Hero />
             </section>
 
-            <section className="w-full">
+            <section id="about" className="w-full">
                 <Perks />
             </section>
 
-            <section className="w-full">
+            <section id="how-it-works" className="w-full">
                 <HowItWorks />
             </section>
 
-            <section className="w-full">
+            <section id="platform" className="w-full">
                 <Features />
             </section>
 
-            <section className="w-full">
+            <section id="testimonials" className="w-full">
                 <Testimonials />
             </section>
 
-            <section className="w-full">
+            <section id="products" className="w-full">
                 <Pricing />
             </section>
 
-            <section className="w-full">
+            <section id="metrics" className="w-full">
                 <PlatformMetrics />
             </section>
 
-            <section className="w-full">
+            <section id="faq" className="w-full">
                 <FAQ />
             </section>
 
-            <section className="w-full">
+            <section id="cta" className="w-full">
                 <CTA />
             </section>
         </div>

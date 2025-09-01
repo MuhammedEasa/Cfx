@@ -10,6 +10,7 @@ import { useState, useCallback } from "react";
 import AnimationContainer from "./global/animation-container";
 import Icons from "./global/icons";
 import Wrapper from "./global/wrapper";
+import { ThemeToggle } from "./theme-toggle";
 
 const Navbar = () => {
     const [open, setOpen] = useState<boolean>(false);
@@ -70,7 +71,8 @@ const Navbar = () => {
 
                     {/* CTA Button - Fixed width to balance layout */}
                     <AnimationContainer animation="fadeLeft" delay={0.1} className="flex-shrink-0 w-48 flex justify-end">
-                        <div className="flex items-center gap-x-4">
+                        <div className="flex items-center gap-x-3">
+                            <ThemeToggle />
                             {isLoggedIn ? (
                                 <Link href="/">
                                     <Button variant="default" size="sm">
@@ -94,12 +96,13 @@ const Navbar = () => {
                 <Wrapper className="flex items-center justify-between h-16 px-4">
                     <AnimationContainer animation="fadeRight" delay={0.1}>
                         <Link href="/" aria-label="Home">
-                            <Icons.logo className="w-max h-8" />
+                            <Icons.icon className="w-max h-8" />
                         </Link>
                     </AnimationContainer>
 
                     <AnimationContainer animation="fadeLeft" delay={0.1}>
-                        <div className="flex items-center gap-x-3">
+                        <div className="flex items-center gap-x-2">
+                            <ThemeToggle />
                             <Link href="/">
                                 <Button variant="default" size="sm">
                                     Create Account

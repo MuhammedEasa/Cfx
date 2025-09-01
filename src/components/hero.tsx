@@ -6,6 +6,8 @@ import Wrapper from "./global/wrapper";
 import { Button } from "./ui/button";
 import Marquee from "./ui/marquee";
 import SectionBadge from "./ui/section-badge";
+import { GalaxyBackground } from "./ui/galaxy-background";
+import { MarketTicker } from "./market-ticker";
 
 const Hero = () => {
 
@@ -86,14 +88,15 @@ const Hero = () => {
                     </div>
                 </AnimationContainer>
             </div>
-            <AnimationContainer animation="scaleUp" delay={1.2} className="absolute w-2/3 h-auto -top-[8%] left-1/4 -z-10">
-                <Image
-                    src="/images/hero-gradient.svg"
-                    alt="hero"
-                    width={1024}
-                    height={1024}
-                    className="object-cover w-full h-auto"
-                />
+            <AnimationContainer animation="scaleUp" delay={1.2} className="absolute inset-0 -z-10">
+                <GalaxyBackground className="opacity-60" />
+            </AnimationContainer>
+
+            {/* Live Market Ticker */}
+            <AnimationContainer animation="fadeUp" delay={1.4} className="w-full mt-16">
+                <div className="bg-card/30 backdrop-blur-sm rounded-lg border border-border/50 overflow-hidden">
+                    <MarketTicker className="h-16" />
+                </div>
             </AnimationContainer>
         </Wrapper>
     )

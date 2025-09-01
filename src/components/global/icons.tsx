@@ -8,9 +8,9 @@ const Icons = {
         <Image
             src="/icons/cfx_logo.png"
             alt="CFX Prime Logo"
-            width={40}
-            height={40}
-            className="object-contain"
+            width={120}
+            height={32}
+            className="object-contain max-w-[120px] h-8"
             {...props}
         />
     ),
