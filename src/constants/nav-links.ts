@@ -1,15 +1,15 @@
 export const NAV_LINKS = [
     {
         name: "About Us",
-        link: "#about",
+        link: "/#about",
     },
     {
         name: "Platform",
-        link: "#platform",
+        link: "/#platform",
     },
     {
         name: "Products",
-        link: "#products",
+        link: "/#products",
     },
     {
         name: "Accounts",

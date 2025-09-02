@@ -39,10 +39,10 @@ const HowItWorks = () => {
           >
             <div
               className={cn(
-                "flex flex-col items-start gap-4 bg-gradient-to-b rounded-lg lg:rounded-2xl p-4 lg:p-8",
+                "flex flex-col items-start gap-4 bg-gradient-to-b rounded-lg lg:rounded-2xl p-4 lg:p-8 border border-border/20",
                 index % 2 === 0
-                  ? "from-neutral-900 to-transparent"
-                  : "from-transparent to-neutral-900"
+                  ? "from-card/50 to-transparent backdrop-blur-sm"
+                  : "from-transparent to-card/50 backdrop-blur-sm"
               )}
             >
               <div className="flex items-center gap-x-4">

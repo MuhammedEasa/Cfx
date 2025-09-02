@@ -34,7 +34,7 @@ const Testimonials = () => {
                     <div className="absolute -left-1 top-0 w-20 h-full bg-gradient-to-r from-background to-transparent z-10" />
                     <div className="absolute -right-1 top-0 w-20 h-full bg-gradient-to-l from-background to-transparent z-10" />
 
-                    <Marquee className="[--gap:1.5rem]" pauseOnHover>
+                    <Marquee className="[--duration:45s] [--gap:1.5rem]" pauseOnHover={false} repeat={3}>
                         {TESTIMONIALS.map((testimonial, index) => (
                             <AnimationContainer
                                 key={index}
@@ -52,6 +52,7 @@ const Testimonials = () => {
                                                         src={testimonial.image}
                                                         alt={testimonial.author}
                                                         fill
+                                                        sizes="48px"
                                                         className="object-cover"
                                                     />
                                                 </div>

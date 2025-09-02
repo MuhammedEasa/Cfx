@@ -4,6 +4,7 @@ import { ACCOUNT_TYPES } from '@/constants';
 import { cn } from '@/lib';
 import { Check, AlertCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import Link from 'next/link';
 import AnimationContainer from './global/animation-container';
 import Wrapper from "./global/wrapper";
 import { Button } from "./ui/button";
@@ -158,12 +159,14 @@ const Pricing = () => {
                             </AnimationContainer>
 
                             <AnimationContainer animation="fadeUp" delay={1.2 + (index * 0.2)}>
-                                <Button
-                                    variant={account.popular ? "default" : "secondary"}
-                                    className="w-full mt-6"
-                                >
-                                    {account.buttonText}
-                                </Button>
+                                <Link href={account.name === "Live Account" ? "/account-types" : "/contact"}>
+                                    <Button
+                                        variant={account.popular ? "default" : "secondary"}
+                                        className="w-full mt-6"
+                                    >
+                                        {account.buttonText}
+                                    </Button>
+                                </Link>
                             </AnimationContainer>
                         </div>
                     </AnimationContainer>

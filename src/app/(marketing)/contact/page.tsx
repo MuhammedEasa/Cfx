@@ -100,7 +100,7 @@ export default function ContactPage() {
                     {/* Contact Information */}
                     <div className="lg:col-span-1">
                         <AnimationContainer animation="fadeLeft" delay={0.4}>
-                            <div className="space-y-6">
+                            <div className="space-y-6 bg-gradient-to-br from-primary/10 to-primary/5 dark:from-card/50 dark:to-card/30 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 dark:border-border/20">
                                 <div>
                                     <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
                                     <div className="space-y-4">

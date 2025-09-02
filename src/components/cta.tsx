@@ -67,7 +67,7 @@ const CTA = () => {
 
                     <AnimationContainer animation="fadeUp" delay={0.6}>
                         <div className="flex items-center mt-4">
-                            <div className="rounded-full px-4 py-2.5 bg-neutral-900 flex flex-wrap md:flex-row items-center justify-center gap-4">
+                            <div className="rounded-full px-4 py-2.5 bg-card/50 backdrop-blur-sm border border-border/20 flex flex-wrap md:flex-row items-center justify-center gap-4">
                                 {HIGHLIGHTS.map((item, index) => (
                                     <AnimationContainer
                                         key={index}
@@ -94,13 +94,13 @@ const CTA = () => {
 
                     <AnimationContainer animation="fadeUp" delay={1}>
                         <div className="flex items-center gap-4 mt-6">
-                            <Link href="/register">
+                            <Link href="/account-types">
                                 <Button size="lg">
                                     Open Live Account
                                     <ArrowRightIcon className="size-4 ml-2" />
                                 </Button>
                             </Link>
-                            <Link href="/demo">
+                            <Link href="/contact">
                                 <Button size="lg" variant="outline">
                                     Try Demo Account
                                 </Button>

@@ -83,7 +83,7 @@ const PlatformMetrics = () => {
                             animation={metric.reverse ? "fadeLeft" : "fadeRight"}
                             delay={0.6 + (index * 0.2)}
                         >
-                            <div className="relative rounded-3xl bg-[#191919] p-4 lg:p-6 overflow-hidden z-0">
+                            <div className="relative rounded-3xl bg-card/50 backdrop-blur-sm border border-border/20 p-4 lg:p-6 overflow-hidden z-0">
                                 <AnimationContainer animation="scaleUp" delay={0.7 + (index * 0.2)}>
                                     <div className={cn(
                                         "absolute -bottom-1/2 right-0 bg-primary size-20 lg:size-32 blur-[3rem] lg:blur-[5rem] rounded-full -z-10",
@@ -98,11 +98,11 @@ const PlatformMetrics = () => {
                                     <AnimationContainer animation="fadeUp" delay={0.8 + (index * 0.2)}>
                                         <div className="flex flex-col">
                                             <div className="flex items-baseline gap-1">
-                                                <span className="text-4xl font-medium">
+                                                <span className="text-4xl font-medium text-foreground">
                                                     <AnimatedCounter value={metric.number} />
                                                 </span>
                                                 {metric.suffix && (
-                                                    <span className="text-4xl font-medium">
+                                                    <span className="text-4xl font-medium text-foreground">
                                                         {metric.suffix}
                                                     </span>
                                                 )}

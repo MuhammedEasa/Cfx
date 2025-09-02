@@ -10,20 +10,22 @@ const Perks = () => {
         <Wrapper className="py-20 lg:py-32 relative">
             <div className="flex flex-col items-center text-center gap-4">
                 <AnimationContainer animation="fadeUp" delay={0.2}>
-                    <SectionBadge title="Perks" />
+                    <SectionBadge title="About Us" />
                 </AnimationContainer>
 
                 <AnimationContainer animation="fadeUp" delay={0.3}>
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-b from-foreground to-neutral-400">
-                    Trade Globally with Powerful Tools
+                        Leading Global Forex
                         <br />
-                        on CFX Prime
+                        & CFD Brokerage
                     </h2>
                 </AnimationContainer>
 
                 <AnimationContainer animation="fadeUp" delay={0.4}>
-                    <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-                    Access a wide range of financial instruments including Forex, Stocks, Commodities, Indices, ETFs, and Futures—all from a single, intuitive platform.
+                    <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                        CFX Prime is a premier global forex and CFD brokerage firm with over a decade of experience in providing traders with unparalleled access to international financial markets. We combine cutting-edge technology, institutional-grade tools, and competitive pricing to empower traders at every level.
+                        <br /><br />
+                        Our mission is to democratize trading by offering professional-grade platforms, comprehensive market access, and exceptional customer service. Whether you're a beginner or a seasoned professional, CFX Prime provides the infrastructure and support you need to succeed in today's dynamic markets.
                     </p>
                 </AnimationContainer>
             </div>

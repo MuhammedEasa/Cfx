@@ -14,6 +14,11 @@ export const MarketTicker: React.FC<MarketTickerProps> = ({ className }) => {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
+    // Clear previous widget
+    if (containerRef.current) {
+      containerRef.current.innerHTML = '';
+    }
+
     const script = document.createElement("script");
     script.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
     script.type = "text/javascript";
@@ -94,9 +99,9 @@ export const MarketTicker: React.FC<MarketTickerProps> = ({ className }) => {
         }
       ],
       showSymbolLogo: true,
-      isTransparent: true,
+      isTransparent: false,
       displayMode: "adaptive",
-      colorTheme: theme === "light" ? "light" : "dark",
+      colorTheme: theme === "dark" ? "dark" : "light",
       locale: "en"
     });
 

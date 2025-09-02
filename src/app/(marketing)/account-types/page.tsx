@@ -65,7 +65,7 @@ export default function AccountTypesPage() {
         <Wrapper className="py-20 lg:py-32">
             <div className="max-w-7xl mx-auto">
                 {/* Header Section */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-16 bg-gradient-to-br from-primary/5 to-primary/10 dark:from-card/30 dark:to-card/50 backdrop-blur-sm rounded-2xl p-8 border border-primary/10 dark:border-border/20">
                     <AnimationContainer animation="fadeUp" delay={0.1}>
                         <SectionBadge title="Account Types" />
                     </AnimationContainer>

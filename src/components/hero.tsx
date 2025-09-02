@@ -1,107 +1,95 @@
 import Image from "next/image";
-import Link from "next/link";
 import AnimationContainer from "./global/animation-container";
 import Wrapper from "./global/wrapper";
-import { Button } from "./ui/button";
 import Marquee from "./ui/marquee";
-import SectionBadge from "./ui/section-badge";
 import { GalaxyBackground } from "./ui/galaxy-background";
 import { MarketTicker } from "./market-ticker";
+import HeroSlider from "./hero-slider";
 
 const Hero = () => {
+  const companies = [
+    { name: "Apple", symbol: "AAPL", logo: "/logos/apple.svg" },
+    { name: "Microsoft", symbol: "MSFT", logo: "/logos/microsoft.svg" },
+    { name: "Nvidia", symbol: "NVDA", logo: "/logos/nvidia.svg" },
+    { name: "Tesla", symbol: "TSLA", logo: "/logos/tesla.svg" },
+    { name: "Meta", symbol: "META", logo: "/logos/meta.svg" },
+    { name: "Amazon", symbol: "AMZN", logo: "/logos/amazon.svg" },
+    { name: "Google", symbol: "GOOGL", logo: "/logos/google.svg" },
+    { name: "Netflix", symbol: "NFLX", logo: "/logos/netflix.svg" },
+  ];
 
-    const companies = [
-        { name: "Apple", symbol: "AAPL" },
-        { name: "Microsoft", symbol: "MSFT" },
-        { name: "Nvidia", symbol: "NVDA" },
-        { name: "Tesla", symbol: "TSLA" },
-        { name: "Meta", symbol: "META" },
-        { name: "Amazon", symbol: "AMZN" },
-        { name: "Google", symbol: "GOOGL" },
-        { name: "Netflix", symbol: "NFLX" }
-    ];
+  return (
+    <Wrapper className="flex flex-col items-center justify-center py-12 relative min-h-screen">
+      {/* Galaxy Background Effect */}
+      <AnimationContainer
+        animation="scaleUp"
+        delay={0.1}
+        className="absolute inset-0 -z-10"
+      >
+        <GalaxyBackground className="opacity-40" />
+      </AnimationContainer>
 
-    return (
-        <Wrapper className="pt-20 lg:pt-32 relative min-h-screen w-full h-full flex-1">
-            <div className="flex flex-col lg:flex-row w-full h-full lg:gap-16">
-                <div className="flex flex-col items-start gap-10 py-8 w-full">
-                    <div className="flex flex-col items-start gap-4">
-                        <AnimationContainer animation="fadeUp" delay={0.2}>
-                            <SectionBadge title="Serving Clients in 50+ Countries" />
-                        </AnimationContainer>
+      {/* Hero Slider */}
+      <div className="w-full mb-16 relative z-10">
+        <HeroSlider />
+      </div>
 
-                        <AnimationContainer animation="fadeUp" delay={0.4}>
-                            <h1 className="text-5xl lg:text-6xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-r from-foreground to-neutral-500">
-                                Trade Smarter with CFX Prime
-                            </h1>
-                        </AnimationContainer>
-
-                        <AnimationContainer animation="fadeUp" delay={0.6}>
-                            <p className="text-sm md:text-base lg:text-lg text-muted-foreground">
-                                Unlock global markets with a secure and reliable trading platform. CFX Prime offers 2000+ CFD instruments, expert support, and innovative tools for traders at every level.
-                            </p>
-                        </AnimationContainer>
-                    </div>
-
-                    <AnimationContainer animation="fadeUp" delay={0.8}>
-                        <div className="w-full">
-                            <Link href="/">
-                                <Button size="md" className="w-full md:w-auto">
-                                    Start Trading Now
-                                </Button>
-                            </Link>
-                        </div>
-                    </AnimationContainer>
-
-                    <AnimationContainer animation="fadeUp" delay={1}>
-                        <div className="flex flex-col items-start gap-4 py-4">
-                            <p className="text-sm md:text-base text-muted-foreground">
-                                Trusted by 10,000+ Global Traders
-                            </p>
-                            <div className="w-full relative max-w-[calc(100vw-2rem)] lg:max-w-lg">
-                                <Marquee className="[--duration:40s] select-none [--gap:2rem]">
-                                    {companies.map((company, index) => (
-                                        <div key={index} className="flex flex-col items-center justify-center text-muted-foreground h-16 min-w-[80px]">
-                                            <div className="text-sm font-semibold text-foreground">{company.name}</div>
-                                            <div className="text-xs text-muted-foreground">{company.symbol}</div>
-                                        </div>
-                                    ))}
-                                </Marquee>
-                                <div className="pointer-events-none absolute inset-y-0 -right-1 w-1/3 bg-gradient-to-l from-background z-40"></div>
-                                <div className="pointer-events-none absolute inset-y-0 -left-1 w-1/3 bg-gradient-to-r from-background z-40"></div>
-                            </div>
-                        </div>
-                    </AnimationContainer>
+      {/* Company Logos Section */}
+      <AnimationContainer
+        animation="fadeUp"
+        delay={0.6}
+        className="w-full relative z-10"
+      >
+        <div className="flex flex-col items-center justify-center w-full py-8 md:py-16 relative">
+          <div className="text-center mb-8">
+            <p className="text-sm md:text-base text-muted-foreground">
+              Trade Popular Stocks & Assets
+            </p>
+          </div>
+          <div className="w-full relative max-w-6xl">
+            <Marquee
+              className="[--duration:25s] select-none [--gap:3rem]"
+              pauseOnHover={false}
+              repeat={4}
+            >
+              {companies.map((company, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center h-20 min-w-[120px] group"
+                >
+                  <div className="w-12 h-12 mb-2 transition-transform duration-300 group-hover:scale-110">
+                    <Image
+                      src={company.logo}
+                      width={100}
+                      height={100}
+                      alt={company.name}
+                      className="w-full h-full opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                  </div>
+                  <div className="text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                    {company.symbol}
+                  </div>
                 </div>
+              ))}
+            </Marquee>
+            <div className="pointer-events-none absolute inset-y-0 -right-1 w-1/3 bg-gradient-to-l from-background z-40"></div>
+            <div className="pointer-events-none absolute inset-y-0 -left-1 w-1/3 bg-gradient-to-r from-background z-40"></div>
+          </div>
+        </div>
+      </AnimationContainer>
 
-                <AnimationContainer animation="fadeRight" delay={0.4}>
-                    <div className="flex flex-col items-center justify-center w-full h-min relative">
-                        <div className="w-full max-w-2xl lg:max-w-4xl relative">
-                            <Image
-                                src="/icons/landing.png"
-                                alt="CFX Prime Trading Platform"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
-                                width={1024}
-                                height={1024}
-                                className="object-contain w-full h-auto rounded-xl lg:rounded-2xl"
-                                priority
-                            />
-                        </div>
-                    </div>
-                </AnimationContainer>
-            </div>
-            <AnimationContainer animation="scaleUp" delay={1.2} className="absolute inset-0 -z-10">
-                <GalaxyBackground className="opacity-60" />
-            </AnimationContainer>
-
-            {/* Live Market Ticker */}
-            <AnimationContainer animation="fadeUp" delay={1.4} className="w-full mt-16">
-                <div className="bg-card/30 backdrop-blur-sm rounded-lg border border-border/50 overflow-hidden">
-                    <MarketTicker className="h-16" />
-                </div>
-            </AnimationContainer>
-        </Wrapper>
-    )
+      {/* Live Market Ticker */}
+      <AnimationContainer
+        animation="fadeUp"
+        delay={0.8}
+        className="w-full mt-8 relative z-10"
+      >
+        <div className="bg-card/30 backdrop-blur-sm rounded-lg border border-border/50 overflow-hidden">
+          <MarketTicker className="h-16" />
+        </div>
+      </AnimationContainer>
+    </Wrapper>
+  );
 };
 
 export default Hero;
