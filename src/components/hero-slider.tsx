@@ -16,7 +16,8 @@ import 'swiper/css/effect-fade';
 const SLIDER_DATA = [
   {
     id: 1,
-    image: '/images/slide_1.jpg',
+    media: '/images/slide_1.mp4',
+    type: 'video',
     title: 'Refer & Earn',
     subtitle: 'Unlimited Rewards',
     description: 'Invite friends and earn up to $500 for every successful referral. No limits, no caps - just pure earning potential.',
@@ -26,7 +27,8 @@ const SLIDER_DATA = [
   },
   {
     id: 2,
-    image: '/images/slide_2.jpg',
+    media: '/images/slide_2.jpg',
+    type: 'image',
     title: 'Swap Free Trading',
     subtitle: 'Zero Hidden Costs',
     description: 'Trade without swap fees on all major currency pairs. Keep more of your profits with our transparent pricing.',
@@ -36,7 +38,8 @@ const SLIDER_DATA = [
   },
   {
     id: 3,
-    image: '/images/slide_3.jpg',
+    media: '/images/slide_3.jpg',
+    type: 'image',
     title: 'Tightest Spreads',
     subtitle: 'From 0.0 Pips',
     description: 'Experience the market with institutional-grade spreads starting from 0.0 pips on major pairs.',
@@ -46,7 +49,8 @@ const SLIDER_DATA = [
   },
   {
     id: 4,
-    image: '/images/slide_4.jpg',
+    media: '/images/slide_4.jpg',
+    type: 'image',
     title: 'Professional Trading',
     subtitle: 'Advanced Platform',
     description: 'Access professional trading tools, real-time analytics, and lightning-fast execution on our cutting-edge platform.',
@@ -58,7 +62,7 @@ const SLIDER_DATA = [
 
 export const HeroSlider = () => {
   return (
-    <div className="w-full max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+    <div className="w-full max-w-[100rem] mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">
       <AnimationContainer animation="fadeUp" delay={0.2}>
         <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-r from-black/20 to-black/10 backdrop-blur-sm border border-white/10">
           <Swiper
@@ -88,15 +92,32 @@ export const HeroSlider = () => {
             {SLIDER_DATA.map((slide) => (
               <SwiperSlide key={slide.id}>
                 <div className="relative h-[350px] sm:h-[400px] lg:h-[500px] xl:h-[550px] w-full">
-                  {/* Background Image */}
-                  <Image
-                    src={slide.image}
-                    alt={slide.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1440px"
-                    className="object-cover"
-                    priority={slide.id === 1}
-                  />
+                  {/* Background Media */}
+                  {slide.type === 'video' ? (
+                    <video
+                      src={slide.media}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      style={{
+                        filter: 'brightness(0.7)',
+                        WebkitTransform: 'translateZ(0)',
+                        transform: 'translateZ(0)'
+                      }}
+                    />
+                  ) : (
+                    <Image
+                      src={slide.media}
+                      alt={slide.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1600px"
+                      className="object-cover"
+                      priority={slide.id === 1}
+                    />
+                  )}
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/40" />

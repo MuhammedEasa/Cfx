@@ -14,21 +14,21 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter with environment variables
+    // Create transporter with the specified configuration
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: false, // true for 465, false for other ports
+      host: "digitalproglobal.com",
+      port: 465,
+      secure: true, // true for SSL
       auth: {
-        user: process.env.SMTP_USER || 'demo@cfxprime.com',
-        pass: process.env.SMTP_PASS || 'demo_password_123',
+        user: "cfxprime@digitalproglobal.com",
+        pass: process.env.EMAIL_PASSWORD, // store password in .env
       },
     });
 
     // Email content
     const mailOptions = {
-      from: process.env.SMTP_FROM || 'CFX Prime <noreply@cfxprime.com>',
-      to: process.env.CONTACT_EMAIL || 'support@cfxprime.com',
+      from: process.env.SMTP_FROM || 'CFX Prime <cfxprime@digitalproglobal.com>',
+      to: process.env.CONTACT_EMAIL || 'cfxprime@digitalproglobal.com',
       subject: `New Contact Form Submission - ${accountType} Account Interest`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
