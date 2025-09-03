@@ -48,10 +48,9 @@ const Hero = () => {
           </div>
           <div className="w-full relative max-w-6xl">
             <Marquee
-              className="[--duration:20s] select-none [--gap:4rem]"
+              className="[--duration:30s] [--gap:3rem]"
               pauseOnHover={false}
-              repeat={6}
-              reverse={false}
+              repeat={4}
             >
               {companies.map((company, index) => (
                 <div
