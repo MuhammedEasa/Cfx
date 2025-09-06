@@ -30,11 +30,6 @@ export type FAQItem = {
         "The account can be opened in a few easy steps. To get started, visit our website and click on 'Register'.",
     },
     {
-      question: "Is there a mobile app available?",
-      answer:
-        "Yes, we have both iOS and Android apps available. The mobile apps offer all core functionalities of the web platform, allowing you to manage your trades on the go with real-time notifications and updates.",
-    },
-    {
       question: "What trading platforms does CFX Prime offer?",
       answer:
         "CFX Prime offers the MetaTrader 5 (MT5) platform, which provides advanced charting tools, detailed market analysis, and automated trading systems. MT5 is available on desktop, web, and mobile devices, allowing you to trade anytime, anywhere.",
@@ -42,7 +37,7 @@ export type FAQItem = {
     {
       question: "What kind of support does CFX Prime provide?",
       answer:
-        "CFX Prime offers 24/6 customer support in multiple languages through live chat, email, and phone. Their dedicated support team is trained to assist with technical issues, platform navigation, and best practices for trading.",
+        "CFX Prime offers 24/7 customer support in multiple languages through live chat, email, and phone. Their dedicated support team is trained to assist with technical issues, platform navigation, and best practices for trading.",
     },
     {
       question: "How secure are the transactions on CFX Prime's platform?",

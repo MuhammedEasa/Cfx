@@ -45,18 +45,18 @@ const HowItWorks = () => {
                   : "from-transparent to-card/50 backdrop-blur-sm"
               )}
             >
-              <div className="flex items-center gap-x-4">
+              <div className="flex items-center gap-x-4 w-full">
                 <AnimationContainer
                   animation="scaleUp"
                   delay={0.7 + index * 0.2}
                 >
-                  <div className="size-10 rounded-full bg-gradient-to-b from-primary to-orange-400 flex items-center justify-center">
-                    <span className="text-lg font-medium text-white">
+                  <div className="size-10 rounded-full bg-gradient-to-b from-primary to-primary/80 flex items-center justify-center flex-shrink-0">
+                    <span className="text-lg font-semibold text-white">
                       {index + 1}
                     </span>
                   </div>
                 </AnimationContainer>
-                <h3 className="text-lg font-medium">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-foreground text-left flex-1">{item.title}</h3>
               </div>
               <div className="space-y-4 w-full">
                 <AnimationContainer

@@ -48,7 +48,7 @@ export const ACCOUNT_TYPES: AccountType[] = [
                 description: "Experience precise order placements with high-speed execution for all market conditions."
             },
             {
-                title: "Dedicated 24/6 Support",
+                title: "Dedicated 24/7 Support",
                 description: "Expert support available in multiple languages to assist with any trading or technical queries."
             }
         ],
@@ -82,7 +82,7 @@ export const ACCOUNT_TYPES: AccountType[] = [
                 description: "Experience precise order placements with high-speed execution for all market conditions."
             },
             {
-                title: "Dedicated 24/6 Support",
+                title: "Dedicated 24/7 Support",
                 description: "Expert support available in multiple languages to assist with any trading or technical queries."
             }
         ],

@@ -19,7 +19,7 @@ const ACCOUNT_TYPES = [
             "Suitable For: New Traders",
             "MT5 & CQG WebTrader",
             "Mobile, desktop, and tablet compatible",
-            "24×5 Support"
+            "24×7 Support"
         ],
         cta: "Open a Standard Account",
         gradient: "from-blue-500/20 to-cyan-500/20"
@@ -36,7 +36,7 @@ const ACCOUNT_TYPES = [
             "Suitable For: Professional/Full-Time Traders",
             "MT5 & CQG WebTrader",
             "Mobile, desktop, and tablet compatible",
-            "Dedicated RM & 24×5 Support"
+            "Dedicated RM & 24×7 Support"
         ],
         cta: "Open a Pro Account",
         gradient: "from-primary/20 to-yellow-500/20"
@@ -53,7 +53,7 @@ const ACCOUNT_TYPES = [
             "Suitable For: High Volume Traders",
             "MT5 & CQG WebTrader",
             "Mobile, desktop, and tablet compatible",
-            "Dedicated RM & Sales Trader — 24×5 Support"
+            "Dedicated RM & Sales Trader — 24×7 Support"
         ],
         cta: "Open a Premium Account",
         gradient: "from-purple-500/20 to-pink-500/20"

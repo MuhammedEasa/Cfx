@@ -42,9 +42,9 @@ const Testimonials = () => {
                                 delay={0.6 + (index * 0.1)}
                             >
                                 <div
-                                    className="flex-shrink-0 w-[400px] rounded-3xl bg-card backdrop-blur-3xl p-8"
+                                    className="flex-shrink-0 w-[420px] h-[280px] rounded-3xl bg-card backdrop-blur-3xl p-8 flex flex-col justify-between"
                                 >
-                                    <div className="flex flex-col gap-6">
+                                    <div className="flex flex-col gap-4">
                                         <AnimationContainer animation="fadeRight" delay={0.7 + (index * 0.1)}>
                                             <div className="flex items-center gap-4">
                                                 <div className="relative w-12 h-12 rounded-full overflow-hidden">
@@ -68,7 +68,7 @@ const Testimonials = () => {
                                         </AnimationContainer>
 
                                         <AnimationContainer animation="fadeUp" delay={0.8 + (index * 0.1)}>
-                                            <p className="text-lg">
+                                            <p className="text-base leading-relaxed line-clamp-4 flex-1">
                                                 &quot;{testimonial.content}&quot;
                                             </p>
                                         </AnimationContainer>

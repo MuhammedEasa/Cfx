@@ -50,22 +50,6 @@ export const MarketTicker: React.FC<MarketTickerProps> = ({ className }) => {
           title: "Silver"
         },
         {
-          proName: "NYMEX:CL1!",
-          title: "Crude Oil"
-        },
-        {
-          proName: "TVC:DJI",
-          title: "US30"
-        },
-        {
-          proName: "TVC:SPX",
-          title: "S&P 500"
-        },
-        {
-          proName: "TVC:NDX",
-          title: "US100"
-        },
-        {
           proName: "NASDAQ:TSLA",
           title: "Tesla"
         },

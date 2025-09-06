@@ -49,7 +49,7 @@ const Pricing = () => {
                     >
                         <div
                             className={cn(
-                                "relative rounded-3xl backdrop-blur-3xl p-8 flex flex-col overflow-hidden",
+                                "relative rounded-3xl backdrop-blur-3xl p-8 flex flex-col overflow-hidden min-h-[600px]",
                                 account.popular && "bg-card/80",
                                 !account.popular && "bg-gradient-to-b from-card/80 to-background/0"
                             )}

@@ -2,22 +2,22 @@ export const METRICS = [
     {
         number: 100,
         suffix: "+",
-        label: "Global Users",
-        image: "/icons/metric-one.svg",
+        label: "User Trust",
+        image: "/images/gateway_1.png",
         reverse: false
     },
     {
         number: 20,
         suffix: "+",
-        label: "Years Experience",
-        image: "/icons/metric-two.svg",
+        label: "Advanced Technology",
+        image: "/images/gateway_2.png",
         reverse: true
     },
     {
         number: 2000,
         suffix: "+",
-        label: "Trading Products",
-        image: "/icons/metric-three.svg",
+        label: "Expert Support",
+        image: "/images/gateway_3.png",
         reverse: false
     }
 ];

@@ -1,7 +1,6 @@
 "use client"
 import { METRICS } from '@/constants';
 import { cn } from "@/lib";
-import NumberFlow from '@number-flow/react';
 import Image from "next/image";
 import AnimationContainer from './global/animation-container';
 import Wrapper from "./global/wrapper";
@@ -83,31 +82,31 @@ const PlatformMetrics = () => {
                             animation={metric.reverse ? "fadeLeft" : "fadeRight"}
                             delay={0.6 + (index * 0.2)}
                         >
-                            <div className="relative rounded-3xl bg-card/50 backdrop-blur-sm border border-border/20 p-4 lg:p-6 overflow-hidden z-0">
+                            <div className="relative rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 backdrop-blur-sm border border-primary/20 dark:border-primary/30 p-4 lg:p-6 overflow-hidden z-0 min-h-[120px]">
                                 <AnimationContainer animation="scaleUp" delay={0.7 + (index * 0.2)}>
                                     <div className={cn(
-                                        "absolute -bottom-1/2 right-0 bg-primary size-20 lg:size-32 blur-[3rem] lg:blur-[5rem] rounded-full -z-10",
+                                        "absolute -bottom-1/2 right-0 bg-primary size-16 lg:size-24 blur-[2rem] lg:blur-[3rem] rounded-full -z-10",
                                         metric.reverse && "left-0"
                                     )}></div>
                                 </AnimationContainer>
 
                                 <div className={cn(
-                                    "flex items-center justify-between gap-6 z-30",
+                                    "flex items-center justify-between gap-6 z-30 h-full",
                                     metric.reverse && "flex-row-reverse"
                                 )}>
                                     <AnimationContainer animation="fadeUp" delay={0.8 + (index * 0.2)}>
-                                        <div className="flex flex-col">
-                                            <div className="flex items-baseline gap-1">
-                                                <span className="text-4xl font-medium text-foreground">
+                                        <div className="flex flex-col justify-center flex-1">
+                                            <div className="flex items-baseline gap-1 mb-1">
+                                                <span className="text-3xl lg:text-4xl font-medium text-foreground">
                                                     <AnimatedCounter value={metric.number} />
                                                 </span>
                                                 {metric.suffix && (
-                                                    <span className="text-4xl font-medium text-foreground">
+                                                    <span className="text-3xl lg:text-4xl font-medium text-foreground">
                                                         {metric.suffix}
                                                     </span>
                                                 )}
                                             </div>
-                                            <p className="text-sm text-muted-foreground">
+                                            <p className="text-sm lg:text-base text-muted-foreground font-medium">
                                                 {metric.label}
                                             </p>
                                         </div>
@@ -117,17 +116,17 @@ const PlatformMetrics = () => {
                                         animation={metric.reverse ? "fadeRight" : "fadeLeft"}
                                         delay={0.9 + (index * 0.2)}
                                     >
-                                        <div className={cn(
-                                            "h-32 absolute inset-y-0 my-auto right-0 rounded-2xl flex items-center justify-center",
-                                            metric.reverse && "left-0 right-auto"
-                                        )}>
-                                            <Image
-                                                src={metric.image}
-                                                alt={metric.label}
-                                                width={1024}
-                                                height={1024}
-                                                className="size-full"
-                                            />
+                                        <div className="relative flex-shrink-0">
+                                            {/* Single circle container */}
+                                            <div className="w-16 h-16 lg:w-20 lg:h-20 bg-primary/10 rounded-full flex items-center justify-center border border-primary/20 shadow-md">
+                                                <Image
+                                                    src={metric.image}
+                                                    alt={metric.label}
+                                                    width={40}
+                                                    height={40}
+                                                    className="w-8 h-8 lg:w-10 lg:h-10 object-contain"
+                                                />
+                                            </div>
                                         </div>
                                     </AnimationContainer>
                                 </div>

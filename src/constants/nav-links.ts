@@ -1,19 +1,19 @@
 export const NAV_LINKS = [
     {
-        name: "About Us",
-        link: "/#about",
+        name: "Markets",
+        link: "/#markets",
     },
     {
-        name: "Platform",
-        link: "/#platform",
-    },
-    {
-        name: "Products",
-        link: "/#products",
+        name: "How to Start",
+        link: "/#start-trading",
     },
     {
         name: "Accounts",
         link: "/account-types",
+    },
+    {
+        name: "Testimonials",
+        link: "/#testimonials",
     },
     {
         name: "Contact Us",

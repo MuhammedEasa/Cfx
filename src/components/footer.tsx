@@ -5,10 +5,10 @@ import AnimationContainer from './global/animation-container';
 import Wrapper from "./global/wrapper";
 
 const QUICK_LINKS = [
-    { label: "About Us", href: "/#about" },
-    { label: "Products", href: "/#products" },
-    { label: "Platform", href: "/#platform" },
+    { label: "Markets", href: "/#markets" },
+    { label: "How to Start", href: "/#start-trading" },
     { label: "Account Types", href: "/account-types" },
+    { label: "Testimonials", href: "/#testimonials" },
     { label: "Contact Us", href: "/contact" },
 ];
 
@@ -39,12 +39,12 @@ const Footer = () => {
                                 <Image
                                     src="/icons/cfx_logo.png"
                                     alt="CFX Prime"
-                                    width={36}
-                                    height={36}
+                                    width={48}
+                                    height={48}
                                     priority
                                     className="object-contain"
                                 />
-                                <span className="text-xl lg:text-2xl font-semibold text-foreground">
+                                <span className="text-2xl lg:text-3xl font-semibold text-foreground">
                                     CFX Prime
                                 </span>
                             </div>
