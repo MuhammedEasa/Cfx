@@ -106,16 +106,15 @@ export default function ContactPage() {
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
                                             <Mail className="h-5 w-5 text-primary" />
-                                            <span className="text-muted-foreground">support@cfxprime.com</span>
+                                            <span className="text-muted-foreground">cfxprime@digitalproglobal.com</span>
                                         </div>
                                         <div className="flex items-center gap-3">
                                             <Phone className="h-5 w-5 text-primary" />
-                                            <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                                            <span className="text-muted-foreground">+971 558413067</span>
                                         </div>
                                         <div className="flex items-center gap-3">
                                             <MapPin className="h-5 w-5 text-primary" />
-                                            <span className="text-muted-foreground">Global Trading Hub</span>
-                                        </div>
+                                            <span className="text-muted-foreground">Rodney Bay, St Lucia</span></div>
                                         <div className="flex items-center gap-3">
                                             <Clock className="h-5 w-5 text-primary" />
                                             <span className="text-muted-foreground">24/7 Support Available</span>
@@ -140,7 +139,7 @@ export default function ContactPage() {
                                 <CardHeader>
                                     <CardTitle>Send us a Message</CardTitle>
                                     <CardDescription>
-                                        Fill out the form below and we'll get back to you within 24 hours.
+                                        Fill out the form below and we&apos;ll get back to you within 24 hours.
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent>
@@ -241,7 +240,7 @@ export default function ContactPage() {
                                         {submitStatus === 'success' && (
                                             <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md">
                                                 <p className="text-green-800 dark:text-green-200 text-sm">
-                                                    Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                                                    Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
                                                 </p>
                                             </div>
                                         )}

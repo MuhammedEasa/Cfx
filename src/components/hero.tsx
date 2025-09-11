@@ -25,14 +25,14 @@ const COMPANY_LOGOS = [
 const HERO_SLIDES = [
   {
     id: 1,
-    title: 'Refer & Earn with CFX Prime',
-    subtitle: 'Referral Program',
-    description: 'Invite friends and earn rewards for every successful referral. Build your network while growing your trading opportunities with our comprehensive referral program.',
-    buttonText: 'Start Referring',
-    buttonLink: '/contact',
-    accent: 'from-primary to-primary/80',
-    lightImage: '/images/referandearn.png',
-    darkImage: '/images/referandearn.png',
+    title: 'Professional Trading Platform',
+    subtitle: 'Advanced Technology',
+    description: 'Access professional-grade trading tools with advanced charting, real-time data, and institutional-level execution for serious traders.',
+    buttonText: 'Explore Platform',
+    buttonLink: '/account-types',
+    accent: 'from-orange-500 to-red-500',
+    lightImage: '/images/Professional_Light_01.png',
+    darkImage: '/images/Professional_Dark_01.png',
     type: 'image'
   },
   {
@@ -61,14 +61,14 @@ const HERO_SLIDES = [
   },
   {
     id: 4,
-    title: 'Professional Trading Platform',
-    subtitle: 'Advanced Technology',
-    description: 'Access professional-grade trading tools with advanced charting, real-time data, and institutional-level execution for serious traders.',
-    buttonText: 'Explore Platform',
-    buttonLink: '/account-types',
-    accent: 'from-orange-500 to-red-500',
-    lightImage: '/images/Professional_Light_01.png',
-    darkImage: '/images/Professional_Dark_01.png',
+    title: 'Refer & Earn with CFX Prime',
+    subtitle: 'Referral Program',
+    description: 'Invite friends and earn rewards for every successful referral. Build your network while growing your trading opportunities with our comprehensive referral program.',
+    buttonText: 'Start Referring',
+    buttonLink: '/contact',
+    accent: 'from-primary to-primary/80',
+    lightImage: '/images/referandearn.png',
+    darkImage: '/images/referandearn.png',
     type: 'image'
   }
 ];
@@ -80,7 +80,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
@@ -188,7 +188,7 @@ const Hero = () => {
           <AnimationContainer animation="fadeUp" delay={0.2}>
             <div className="text-center mb-8">
               <p className="text-sm text-muted-foreground">
-                Trade stocks from world's leading companies
+                Trade stocks from world&apos;s leading companies
               </p>
             </div>
           </AnimationContainer>

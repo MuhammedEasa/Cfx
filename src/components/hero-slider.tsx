@@ -16,14 +16,14 @@ import 'swiper/css/effect-fade';
 const SLIDER_DATA = [
   {
     id: 1,
-    media: '/images/slide_1.mp4',
-    type: 'video',
-    title: 'Refer & Earn',
-    subtitle: 'Unlimited Rewards',
-    description: 'Invite friends and earn up to $500 for every successful referral. No limits, no caps - just pure earning potential.',
-    buttonText: 'Start Referring',
-    buttonLink: '/contact',
-    accent: 'from-blue-500 to-cyan-500'
+    media: '/images/slide_5.png',
+    type: 'image',
+    title: 'Professional Trading',
+    subtitle: 'Advanced Platform',
+    description: 'Access professional trading tools, real-time analytics, and lightning-fast execution on our cutting-edge platform.',
+    buttonText: 'Start Trading',
+    buttonLink: '/account-types',
+    accent: 'from-orange-500 to-red-500'
   },
   {
     id: 2,
@@ -47,27 +47,16 @@ const SLIDER_DATA = [
     buttonLink: '/contact',
     accent: 'from-purple-500 to-pink-500'
   },
-  // {
-  //   id: 4,
-  //   media: '/images/slide_4.jpg',
-  //   type: 'image',
-  //   title: 'Professional Trading',
-  //   subtitle: 'Advanced Platform',
-  //   description: 'Access professional trading tools, real-time analytics, and lightning-fast execution on our cutting-edge platform.',
-  //   buttonText: 'Start Trading',
-  //   buttonLink: '/account-types',
-  //   accent: 'from-orange-500 to-red-500'
-  // },
   {
     id: 4,
-    media: '/images/slide_5.png',
-    type: 'image',
-    title: 'Professional Trading',
-    subtitle: 'Advanced Platform',
-    description: 'Access professional trading tools, real-time analytics, and lightning-fast execution on our cutting-edge platform.',
-    buttonText: 'Start Trading',
-    buttonLink: '/account-types',
-    accent: 'from-orange-500 to-red-500'
+    media: '/images/slide_1.mp4',
+    type: 'video',
+    title: 'Refer & Earn',
+    subtitle: 'Unlimited Rewards',
+    description: 'Invite friends and earn up to $500 for every successful referral. No limits, no caps - just pure earning potential.',
+    buttonText: 'Start Referring',
+    buttonLink: '/contact',
+    accent: 'from-blue-500 to-cyan-500'
   }
 ];
 
@@ -90,7 +79,7 @@ export const HeroSlider = () => {
               bulletActiveClass: 'swiper-pagination-bullet-active-custom',
             }}
             autoplay={{
-              delay: 6000,
+              delay: 10000,
               disableOnInteraction: false,
             }}
             effect="fade"

@@ -52,19 +52,19 @@ const Footer = () => {
                             <div className="space-y-4">
                                 <div className="text-muted-foreground text-sm leading-relaxed">
                                     <p className="font-medium text-foreground mb-1">CFX Prime Limited</p>
-                                    <p>Registration Number – 1386998</p>
-                                    <p>SCA License No: 20200000244</p>
+                                    <p>Registration Number – 1385348</p>
+                                    <p>Saint Lucia License No: 38700000244</p>
                                 </div>
 
                                 <div className="text-muted-foreground text-sm leading-relaxed">
-                                    <p className="font-medium text-foreground mb-1">CFX Prime Financial Brokers L.L.C</p>
-                                    <p>112, Building no. 4, Gold & Diamond Park,</p>
-                                    <p>Sheikh Zayed Road, Dubai, UAE.</p>
+                                    <p className="font-medium text-foreground mb-1">CFX Prime Financial Brokers LLC</p>
+                                    <p>First Floor, Super J Castries-Gros Islet Hwy,</p>
+                                    <p>Rodney Bay, St Lucia.</p>
                                 </div>
 
                                 <div className="text-muted-foreground text-sm space-y-1">
-                                    <p className="hover:text-primary transition-colors cursor-pointer">support@cfxprime.com</p>
-                                    <p className="hover:text-primary transition-colors cursor-pointer">+1 (555) 123-4567</p>
+                                    <p className="hover:text-primary transition-colors cursor-pointer">cfxprime@digitalproglobal.com</p>
+                                    <p className="hover:text-primary transition-colors cursor-pointer">+971 558413067</p>
                                 </div>
                             </div>
 

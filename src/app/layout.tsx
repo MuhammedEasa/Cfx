@@ -49,9 +49,9 @@ export default function RootLayout({
                 ],
                 "contactPoint": {
                   "@type": "ContactPoint",
-                  "telephone": "+1-800-CFX-PRIME",
+                  "telephone": "+971 558413067",
                   "contactType": "customer service",
-                  "availableLanguage": ["English", "Spanish", "French", "German"],
+                  "availableLanguage": ["English", "Arabic", "farsi", "Hindi","Pashto"],
                   "hoursAvailable": "Mo-Su 00:00-24:00"
                 },
                 "offers": {

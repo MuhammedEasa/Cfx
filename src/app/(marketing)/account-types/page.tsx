@@ -8,8 +8,8 @@ import Link from "next/link";
 
 const ACCOUNT_TYPES = [
     {
-        name: "Standard",
-        price: "$100",
+        name: "Beginner",
+        price: "$5000",
         icon: Zap,
         description: "Perfect for new traders starting their journey",
         popular: false,
@@ -25,8 +25,8 @@ const ACCOUNT_TYPES = [
         gradient: "from-blue-500/20 to-cyan-500/20"
     },
     {
-        name: "Pro",
-        price: "$10,000",
+        name: "Prime",
+        price: "$25,000",
         icon: Star,
         description: "Designed for professional and full-time traders",
         popular: true,
@@ -42,8 +42,8 @@ const ACCOUNT_TYPES = [
         gradient: "from-primary/20 to-yellow-500/20"
     },
     {
-        name: "Premium",
-        price: "$25,000",
+        name: "Exclusive",
+        price: "$50,000",
         icon: Crown,
         description: "Ultimate package for high volume traders",
         popular: false,
