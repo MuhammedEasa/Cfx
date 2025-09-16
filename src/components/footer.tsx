@@ -64,7 +64,7 @@ const Footer = () => {
 
                                 <div className="text-muted-foreground text-sm space-y-1">
                                     <p className="hover:text-primary transition-colors cursor-pointer">cfxprime@digitalproglobal.com</p>
-                                    <p className="hover:text-primary transition-colors cursor-pointer">+971 558413067</p>
+                                    {/* <p className="hover:text-primary transition-colors cursor-pointer">+971 558413067</p> */}
                                 </div>
                             </div>
 

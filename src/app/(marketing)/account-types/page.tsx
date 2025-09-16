@@ -15,6 +15,8 @@ const ACCOUNT_TYPES = [
         popular: false,
         features: [
             "Leverage: Starts from 400:1",
+            "Spreads: As low as 1.5 Pips",
+            "Swap Free Days: No",
             "Live Market Access: Yes",
             "Suitable For: New Traders",
             "MT5 & CQG WebTrader",
@@ -32,6 +34,8 @@ const ACCOUNT_TYPES = [
         popular: true,
         features: [
             "Leverage: Starts from 400:1",
+            "Spreads: As low as 0.8 Pips",
+            "Swap Free Days: Up to 3 Days",
             "Live Market Access: Yes",
             "Suitable For: Professional/Full-Time Traders",
             "MT5 & CQG WebTrader",
@@ -49,6 +53,8 @@ const ACCOUNT_TYPES = [
         popular: false,
         features: [
             "Leverage: Starts from 400:1",
+            "Spreads: As low as 0.3 Pips",
+            "Swap Free Days: Up to 7 Days",
             "Live Market Access: Yes",
             "Suitable For: High Volume Traders",
             "MT5 & CQG WebTrader",
