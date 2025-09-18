@@ -55,8 +55,8 @@ const HERO_SLIDES = [
     buttonText: 'Learn More',
     buttonLink: '/account-types',
     accent: 'from-green-500 to-emerald-500',
-    lightImage: '/images/Swap_Free_Light_02.png',
-    darkImage: '/images/Swap_Free_Dark_02.png',
+    lightImage: '/images/Swap_Free.png',
+    darkImage: '/images/Swap_Free.png',
     type: 'image'
   },
   {

@@ -61,17 +61,17 @@ const MARKETS_DATA: MarketData[] = [
     ],
     image: "/images/products_img.png"
   },
-  {
-    id: "crypto",
-    name: "Crypto",
-    title: "Cryptocurrency Trading",
-    description: [
-      "Trade popular cryptocurrencies including Bitcoin, Ethereum, and other major digital assets with competitive spreads and secure execution.",
-      "Access the volatile crypto markets with professional trading tools, real-time charts, and comprehensive market analysis.",
-      "Capitalize on the digital revolution with 24/7 trading availability and advanced order types for optimal trade management."
-    ],
-    image: "/images/products_img.png"
-  },
+  // {
+  //   id: "crypto",
+  //   name: "Crypto",
+  //   title: "Cryptocurrency Trading",
+  //   description: [
+  //     "Trade popular cryptocurrencies including Bitcoin, Ethereum, and other major digital assets with competitive spreads and secure execution.",
+  //     "Access the volatile crypto markets with professional trading tools, real-time charts, and comprehensive market analysis.",
+  //     "Capitalize on the digital revolution with 24/7 trading availability and advanced order types for optimal trade management."
+  //   ],
+  //   image: "/images/products_img.png"
+  // },
   {
     id: "etfs",
     name: "ETFs",
